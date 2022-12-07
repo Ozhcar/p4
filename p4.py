@@ -1,4 +1,5 @@
 from colorama import Back, Fore, Style
+from typing import List
 
 
 class FullColumnError(Exception):
@@ -152,7 +153,7 @@ class Grid:
 
 
 class P4Game:
-    def __init__(self, grid: Grid, players: list[Player], align_count: int = 4):
+    def __init__(self, grid: Grid, players: List[Player], align_count: int = 4):
         self.grid = grid
         self.game_name = '4 in a Row'
         self.align_count = align_count
@@ -225,7 +226,7 @@ def main():
         # Setup ; ask for the required values
 
         try:
-            p4_game = P4Game(Grid(4, 4), [Player('Ozhcar'), Player('Biro')])
+            p4_game = P4Game(Grid(), [Player('Ozhcar'), Player('Biro')])
             p4_game.play_game()
         except UnwinnableGameError:
             print(f'The number of tokens to align () exceeds the number of lines () and columns () of the game grid, '
