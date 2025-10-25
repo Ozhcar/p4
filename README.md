@@ -10,7 +10,7 @@ Two players play against each other in the console, to align a custom number of 
 
 ## Start the game
 
-```python
+```bash
 python align_game.py
 ```
 
