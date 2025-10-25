@@ -352,8 +352,8 @@ def main(align_game=None, players=None, data=None):
                 print('The action could not be recognized, try again')
 
 
-main()
-
+if __name__ == "__main__":
+    main()
 
 # 1 - Choosable token color https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal
 # 2 - Choosable default filler token color (like Fore.BLACK or Fore.WHITE)
